@@ -1,0 +1,1 @@
+# QRCodeGenerator-Xamarin.Forms
