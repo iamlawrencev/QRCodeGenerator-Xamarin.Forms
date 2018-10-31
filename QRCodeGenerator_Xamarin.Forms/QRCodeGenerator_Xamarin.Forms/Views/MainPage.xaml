@@ -1,6 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="QRCodeGenerator_Xamarin.Forms.Views.MainPage" Title="{Binding Title}">
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="QRCodeGenerator_Xamarin.Forms.Views.MainPage" 
+             Title="QR Code Generator">
+    
+    <ScrollView>
+        
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Margin="12, 12, 12, 12"
+                     Spacing="12">
+            
+            <Entry Text="{Binding InputText}" 
+                   Placeholder="Input text to be converted"
+                   HeightRequest="44"/>
+            
+            <Label Text="Choose ECC level"
+                   FontSize="Micro"/>
+            
+            <Picker ItemsSource="{Binding ECCLevels}"
+                    ItemDisplayBinding="{Binding}"
+                    SelectedItem="{Binding SelectedECCLevel, Mode=TwoWay}"
+                    HeightRequest="44"/>
+            
+            <Button Text="Convert"
+                    Command="{Binding ConvertCommand}"/>
+            
+            <Frame Padding="0, 0, 0, 0"
+                   OutlineColor="Black"
+                   HasShadow="false">
+                
+                <Image Source="{Binding QrCodeImage}"/>
+                
+            </Frame>
+            
+        </StackLayout>
+        
+    </ScrollView>
+    
 </ContentPage>
