@@ -7,7 +7,7 @@ This is a simple QR Code Generator using [**codebude**](https://github.com/codeb
 ![Screenshot1](https://i.imgur.com/LcJ9dec.png)  ![Screenshot1](https://i.imgur.com/sbtx4cV.png)
 
 ## Installation
-See [**QRCoder**](https://github.com/codebude/QRCoder)'s readme. Also check the [**wiki**](https://github.com/codebude/QRCoder) page for advanced usage.
+See QRCoder's [**readme**](https://github.com/codebude/QRCoder). Also check the [**wiki**](https://github.com/codebude/QRCoder) page for advanced usage.
 
 ## Usage
 You only need these few lines of code to generate your own QR code in Xamarin.Forms
